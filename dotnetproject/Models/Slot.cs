@@ -1,14 +1,17 @@
 ﻿using System;
 
 /// <summary>
-/// Summary description for Class1
+/// Summary description for Slot
 /// </summary>
-public class Class1
+public class Slot
 {
-	public Class1()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public int SlotID { get; set; }
+    public int DegreePlanID { get; set; }
+    [ForeignKey("DegreePlanID")]
+    public DereePlan DegreePlan { get; set; }
+    public int Term { get; set; }
+    public int CreditID { get; set; }
+    [ForeignKey("CreditID")]
+    public Credit Credit { get; set; }
+    public char Status { get; set; }
 }
