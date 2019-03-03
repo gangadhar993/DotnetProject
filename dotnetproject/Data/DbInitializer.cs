@@ -49,9 +49,26 @@ namespace dotnetproject.Data
                      new Credit{CreditID =1,CreditAbbrev = NF,CreditName = NetworkFundamentals,IsSummer = 0,ISSpring = 1, IsFall = 1}
                      new Credit{CreditID =2,CreditAbbrev = 542,CreditName = OOPSwithJAVA,IsSummer = 0,ISSpring = 1, IsFall = 1}
                 };
-                Console.WriteLine($"Inserted{.Length} new students.");
+                Console.WriteLine($"Inserted{credits.Length} new students.");
                 foreach (Credit s in credits) {
                     context.Credits.Add(s);
+                }
+                context.SaveChanges();
+            }
+             if (context.Degrees.Any())
+            {
+                Console.WriteLine("Degreess already exist");
+            }
+            else {
+                var degrees = new Degree[] {
+                     new Degree{DegreeID =1,DegreeAbbrev = ACS+2,DegreeName = MsACS+2,NumberOFTerms = 5},
+                     new Degree{DegreeID =2,DegreeAbbrev = ACS+DB,DegreeName = MsACS+DB,NumberOFTerms = 5},
+                      new Degree{DegreeID =3,DegreeAbbrev = ACS+NF,DegreeName = MsACS+NF,NumberOFTerms = 5},
+                       new Degree{DegreeID =4,DegreeAbbrev = ACS,DegreeName = MsACS,NumberOFTerms = 5}
+                };
+                Console.WriteLine($"Inserted{degrees.Length} new students.");
+                foreach (Degree s in degrees) {
+                    context.Degrees.Add(s);
                 }
                 context.SaveChanges();
             }
