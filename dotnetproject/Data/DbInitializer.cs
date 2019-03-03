@@ -16,7 +16,7 @@ namespace dotnetproject.Data
             }
             else {
                 var slots = new Slot[] {
-                    new Slot{SlotID =1,DegreePlanID =7255,Term=1,CreditID=356,Status='B'}
+                    new Slot{SlotID =1,DegreePlanID =7255,Term=1,CreditID=356,Status='B'},
                     new Slot{SlotID =2,DegreePlanID =7255,Term=1,CreditID=542,Status='B'}
                 };
                 Console.WriteLine($"Inserted{slots.Length} new slots.");
@@ -31,7 +31,7 @@ namespace dotnetproject.Data
             }
             else {
                 var students = new Student[] {
-                    new Student{StudentID =1,LastName = Singam,FirstName = Poojitha,919 = 919571721}
+                    new Student{StudentID =1,LastName = Singam,FirstName = Poojitha,919 = 919571721},
                     new Student{StudentID =2,LastName = Konidela,FirstName = RamCharan,919 = 919571722}
                 };
                 Console.WriteLine($"Inserted{students.Length} new students.");
@@ -46,7 +46,7 @@ namespace dotnetproject.Data
             }
             else {
                 var credits = new Credit[] {
-                     new Credit{CreditID =1,CreditAbbrev = NF,CreditName = NetworkFundamentals,IsSummer = 0,ISSpring = 1, IsFall = 1}
+                     new Credit{CreditID =1,CreditAbbrev = NF,CreditName = NetworkFundamentals,IsSummer = 0,ISSpring = 1, IsFall = 1},
                      new Credit{CreditID =2,CreditAbbrev = 542,CreditName = OOPSwithJAVA,IsSummer = 0,ISSpring = 1, IsFall = 1}
                 };
                 Console.WriteLine($"Inserted{credits.Length} new students.");
@@ -69,6 +69,41 @@ namespace dotnetproject.Data
                 Console.WriteLine($"Inserted{degrees.Length} new students.");
                 foreach (Degree s in degrees) {
                     context.Degrees.Add(s);
+                }
+                context.SaveChanges();
+            }
+             if (context.DegreePlans.Any())
+            {
+                Console.WriteLine("DegreePlans already exist");
+            }
+            else {
+                var degreeplans = new DegreePlan[] {
+                     
+                     new DegreePlan{DegreePlanID =7253,StudentID = 533705,DegreePlanAbbrev = Superfast,DegreePlanName = AsfastasIcan,DegeeID = 3,String =  DegreePlan {DegreePlanID(PK) = 7253 , StudentID (u, 10)(FK) = 533705 ,DegreePlanAbbrev(u,20) =Superfast ,DegreePlanName(u, 20) =AsfastasIcan ,DegreeID (FK)=3},                 
+                     new DegreePlan{DegreePlanID =7254,StudentID = 533705,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7254 , StudentID (u, 10)(FK) = 533705 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeaSummerOff ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7255,StudentID = 533491,DegreePlanAbbrev = Superfast,DegreePlanName = AsfastasIcan,DegReeID = 3,String =   DegreePlan{DegreePlanID(PK) = 7255 , StudentID (u, 10)(FK) = 533491 ,DegreePlanAbbrev(u,20) =Superfast ,DegreePlanName(u, 20) =AsfastasIcan ,DegreeID (FK)=3},
+
+ 
+                     new DegreePlan{DegreePlanID =7256,StudentID = 533491,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7256 , StudentID (u, 10)(FK) = 533491 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeasummerOff ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7257,StudentID = 533727,DegreePlanAbbrev = Superfast,DegreePlanName = AsfastasIcan,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7257 , StudentID (u, 10)(FK) = 533727 ,DegreePlanAbbrev(u,20) =SuperFast ,DegreePlanName(u, 20) =AsfastasIcan ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7258,StudentID = 533727,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7258 , StudentID (u, 10)(FK) = 533727 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeasummerOff ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7259,StudentID = 533622,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7259 , StudentID (u, 10)(FK) = 533622 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeasummerOff ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7260,StudentID = 533622,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7260 , StudentID (u, 10)(FK) = 533622 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeasummerOff ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7261,StudentID = 533988,DegreePlanAbbrev = Superfast,DegreePlanName = AsfastasIcan,DegeeID = 3,String =   DegreePlan{DegreePlanID(PK) = 7261 , StudentID (u, 10)(FK) = 533988 ,DegreePlanAbbrev(u,20) =Superfast ,DegreePlanName(u, 20) =Asfastasican ,DegreeID (FK)=3},
+
+                     new DegreePlan{DegreePlanID =7262,StudentID = 533988,DegreePlanAbbrev = slowandeasy,DegreePlanName = Takeasummeroff,DegeeID = 3,String =  DegreePlan{DegreePlanID(PK) = 7262 , StudentID (u, 10)(FK) = 533988 ,DegreePlanAbbrev(u,20) =slowAndEasy ,DegreePlanName(u, 20) =TakeasummerOff ,DegreeID (FK)=3}
+
+                    }
+                };
+                Console.WriteLine($"Inserted{degreeplans.Length} new students.");
+                foreach (DegreePlan s in degreeplans) {
+                    context.DegreePlans.Add(s);
                 }
                 context.SaveChanges();
             }

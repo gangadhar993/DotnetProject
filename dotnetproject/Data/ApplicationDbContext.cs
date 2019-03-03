@@ -21,6 +21,7 @@ namespace dotnetproject.Data
             public DbSet<Credit> Credits{get; set; }
             //Updated for my table Himabindu
             public Dbset<Degree> Degrees{get; set;}
+            public Dbset<DegreePlan> DegreePlans{get; set;}
             
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
@@ -31,6 +32,7 @@ namespace dotnetproject.Data
             modelBuilder.Entity<Student>().ToTable("Student");
             modelBuilder.Entity<Credit>().ToTable("Credit");
             modelBuilder.Entity<Degree>().ToTable("Degree");
+            modelBuilder.Entity<DegreePlan>().ToTable("DegreePlan");
 
         }
         }
