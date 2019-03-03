@@ -17,8 +17,8 @@ namespace dotnetproject.Data
             //Update your tables
             public DbSet<Slot> Slots{get; set;}
              //Updated for my table Poojitha
-             
             public DbSet<Student> Students{get; set;}
+            public DbSet<Credit> Credits{get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             base.OnModelCreating(modelBuilder);
@@ -26,6 +26,7 @@ namespace dotnetproject.Data
           //Update your tables
             modelBuilder.Entity<Slot>().ToTable("Slot");
             modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<Credits>().ToTable("Credit");
 
         }
         }

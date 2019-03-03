@@ -40,6 +40,22 @@ namespace dotnetproject.Data
                 }
                 context.SaveChanges();
             }
+             if (context.Credits.Any())
+            {
+                Console.WriteLine("Credits already exist");
+            }
+            else {
+                var credits = new Credit[] {
+                     new Credit{CreditID =1,CreditAbbrev = NF,CreditName = NetworkFundamentals,IsSummer = 0,ISSpring = 1, IsFall = 1}
+                     new Credit{CreditID =2,CreditAbbrev = 542,CreditName = OOPSwithJAVA,IsSummer = 0,ISSpring = 1, IsFall = 1}
+                };
+                Console.WriteLine($"Inserted{.Length} new students.");
+                foreach (Credit s in credits) {
+                    context.Credits.Add(s);
+                }
+                context.SaveChanges();
+            }
         }
+
     }
 }
