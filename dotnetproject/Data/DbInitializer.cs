@@ -25,6 +25,21 @@ namespace dotnetproject.Data
                 }
                 context.SaveChanges();
             }
+             if (context.Students.Any())
+            {
+                Console.WriteLine("Students already exist");
+            }
+            else {
+                var students = new Student[] {
+                    new Student{StudentID =1,LastName = Singam,FirstName = Poojitha,919 = 919571721}
+                    new Student{StudentID =2,LastName = Konidela,FirstName = RamCharan,919 = 919571722}
+                };
+                Console.WriteLine($"Inserted{students.Length} new students.");
+                foreach (Student s in students) {
+                    context.Students.Add(s);
+                }
+                context.SaveChanges();
+            }
         }
     }
 }

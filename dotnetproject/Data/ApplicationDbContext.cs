@@ -16,12 +16,14 @@ namespace dotnetproject.Data
             //Updated for my table Srujana
             //Update your tables
             public DbSet<Slot> Slots{get; set;}
+            public DbSet<Student> Students{get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             base.OnModelCreating(modelBuilder);
             
           //Update your tables
             modelBuilder.Entity<Slot>().ToTable("Slot");
+            modelBuilder.Entity<Student>().ToTable("Student");
 
         }
         }
