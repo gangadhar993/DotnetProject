@@ -11,6 +11,19 @@ namespace dotnetproject.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+}
+
+            //Updated for my table Srujana
+            //Update your tables
+            public DbSet<Slot> Slots{get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder){
+            base.OnModelCreating(modelBuilder);
+            
+          //Update your tables
+            modelBuilder.Entity<Slot>().ToTable("Slot");
+
+        }
         }
     }
-}
+
