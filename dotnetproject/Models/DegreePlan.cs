@@ -15,5 +15,6 @@ public class DegreePlan
     [ForeignKey("DegreeID")]
     public Degree Degree { get; set; }
     public string String { get; set; }
-
+    public string DegreePlanAbbrev { get; internal set; }
+    public string DereePlanName { get; internal set; }
 }
