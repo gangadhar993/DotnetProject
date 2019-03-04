@@ -157,11 +157,11 @@ new Slot{SlotID=121,DegreePlanID=7258,Term=5,CreditID=618,Status =A},
             }
             else {
                 var students = new Student[] {
-                    new Student{StudentID =533491,LastName = "Pasham",FirstName = "Goutami",919 = 919564044},
-                    new Student{StudentID =533705,LastName = "Adusumalli",FirstName = "Gangadhar",919 = 919570593},
-                    new Student{StudentID =533988,LastName = "Singam",FirstName = "Poojitha",919 = 919571721},
-                    new Student{StudentID =533622,LastName = "Gattu",FirstName = "Srujana",919 = 919569251},
-                    new Student{StudentID =533727,LastName = "Poshala",FirstName = "Himabindu",919 = 919571930}
+                    new Student{StudentID =533491,LastName = "Pasham",FirstName = "Goutami",_919 = 919564044},
+                    new Student{StudentID =533705,LastName = "Adusumalli",FirstName = "Gangadhar",_919 = 919570593},
+                    new Student{StudentID =533988,LastName = "Singam",FirstName = "Poojitha",_919 = 919571721},
+                    new Student{StudentID =533622,LastName = "Gattu",FirstName = "Srujana",_919 = 919569251},
+                    new Student{StudentID =533727,LastName = "Poshala",FirstName = "Himabindu",_919 = 919571930}
                 };
                 Console.WriteLine($"Inserted{students.Length} new students.");
                 foreach (Student s in students) {
