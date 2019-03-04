@@ -1,7 +1,7 @@
 using System;
 
 /// <summary>
-/// Summary description for Slot
+/// Summary description for DegreeCredit
 /// </summary>
 public class DegreeCredit
 {

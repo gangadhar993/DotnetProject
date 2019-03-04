@@ -23,7 +23,8 @@ namespace dotnetproject.Data
             //Updated for my table Himabindu
             public DbSet<Degree> Degrees{get; set;}
             public DbSet<DegreePlan> DegreePlans{get; set;}
-        public DbSet<StudentTerm> StudentTerms { get; set; }
+            public DbSet<StudentTerm> StudentTerms { get; set; }
+            public DbSet<DegreeCredit> DegreeCredits { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             base.OnModelCreating(modelBuilder);
@@ -35,6 +36,7 @@ namespace dotnetproject.Data
             modelBuilder.Entity<Degree>().ToTable("Degree");
             modelBuilder.Entity<DegreePlan>().ToTable("DegreePlan");
             modelBuilder.Entity<StudentTerm>().ToTable("StudentTerm");
+            modelBuilder.Entity<DegreeCredit>().ToTable("DegreeCredit");
 
         }
         }
